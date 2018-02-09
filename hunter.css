@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+  
+    font: 12px/1.0 "Helvetica neue",Helvetica,Tahoma,"lantinghei sc","Microsoft Yahei",sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+
+
+
+
+  .part1 {
+    overflow: hidden;
+  }
+  .item－box {
+    float: left;
+    width: 200px;
+    height: 100px;
+  }
+
+  
+  .main {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+  
+    margin-top: 50px;
+  }
+    
+
+  .main-title {
+    font-size: 24px;
+    font-weight: bold;
+  
+    color: #990000;
+  
+    width: 100%;
+  
+    text-align: center;
+  
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 36px;
+
+    color: #990000;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    width: 100%;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #990000;
+  }
+
+  .item-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #F0F0F0;
+    padding: 5px;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .item-box:hover .item-des {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    cursor: pointer;
+  }
+
+
+  .item-box .item-des {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #f9f9f9;
+
+    text-align: center;
+
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+
+  .item-box .item-des .item-des-span {
+    color: #333333;
+    font-size: 18px;
+
+    display: block;
+    width: 100%;
+    height: 18px;
+    text-align: left;
+
+    position: relative;
+    top: 10%;
+    margin-top: -9px;
+
+    letter-spacing: 2px;
+  }
