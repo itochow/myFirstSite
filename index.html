@@ -19,10 +19,10 @@
   <!-- 导航菜单栏 -->
   <div id="menu" style="display:none;" onmouseenter="showMenu()" onmouseleave="hideMenu()">
   <ul style="list-style-type:none" >
-      <li><a>CHARACTERS</a></li>
-      <li><a>AUTHOR</a></li>
-      <li><a>STORY</a></li>
-      <li><a>CONTACT</a></li>
+      <li onmouseenter="red()" onmouseleave="black()"><a>CHARACTERS</a></li>
+      <li id="menuItem" onmouseenter="red()" onmouseleave="black()"><a>AUTHOR</a></li>
+      <li id="menuItem2" onmouseenter="red()" onmouseleave="black()"><a>STORY</a></li>
+      <li id="menuItem3" onmouseenter="red()" onmouseleave="black()"><a>CONTACT</a></li>
   </ul>
   </div>
 
@@ -159,6 +159,16 @@ function showMenu(){
 /* 鼠标离开menuIcon上，隐藏导航栏 */
 function hideMenu(){
         document.getElementById("menu").style.display = "none";
+}
+
+/* 鼠标移到menuIcon上，文字变红色 */
+function red(x){
+        x.style.color = "#990000";
+}
+
+/* 鼠标移开menuIcon，文字变深灰色 */
+function black(){
+        document.getElementById("menuItem").style.color = "#333333";
 }
 
 </script>
