@@ -11,10 +11,28 @@
 <!-- container -->
 <div id="main">
 
+  <!-- 左上角导航菜单栏 -->
+  <div id="menuIcon" class="menuIcon" onmouseenter="showMenu()" onmouseleave="hideMenu()">
+      <img src="./img/menu.png" alt="menu" class="item-img">
+  </div>
+  
+  <!-- 导航菜单栏 -->
+  <div id="menu" style="display:none;" onmouseenter="showMenu()" onmouseleave="hideMenu()">
+  <ul style="list-style-type:none" >
+      <li><a>CHARACTERS</a></li>
+      <li><a>AUTHOR</a></li>
+      <li><a>STORY</a></li>
+      <li><a>CONTACT</a></li>
+  </ul>
+  </div>
+
+  <!-- 主标题 -->
   <div class="main-title">HUNTER×HUNTER</div>
 
+  <!-- PART1 角色简介 -->
   <div class="title">CHARACTERS</div>
   <div class="part1">
+        <!-- 4角色简介 -->
         <div class="item-box">
             <img src="./img/gon.jpg" alt="Gon Freecss" class="item-img">
             <div class="item-des">
@@ -49,17 +67,73 @@
         </div>
     </div>
 
+    <!-- 间隙空格调整 -->
+    <div class="space"></div>
+   
+    <!-- PART2 作者简介 -->
+    <div class="title">AUTHOR</div> 
+        
+    <div class="part2">
+        
+            <!-- 作者照片 -->
+            <div class="author">
+                <img src="./img/togashi.jpg" alt="Yoshihiro Togashi"　class="item-img">
+            </div>
+            
+            <!-- 作者简介文字 -->
+            <div class="author-des-box">
+            <p class="author-des">
+                &nbsp&nbsp&nbsp&nbsp<b>Yoshihiro Togashi</b> (冨樫 義博 <i>Togashi Yoshihiro</i>, born April 27, 1966 in Shinjō, Yamagata) is a Japanese manga artist. He began drawing manga at an early age; while he attended college, the publishing company Shueisha recognized his talent. Togashi has authored numerous manga series in different genres during the past three decades. He is perhaps best known for writing and illustrating the YuYu Hakusho and Hunter × Hunter series, both of which have been published in the popular Weekly Shōnen Jump magazine. Togashi is married to Naoko Takeuchi, the author of Sailor Moon.
+                <br>
+                &nbsp&nbsp&nbsp&nbspTogashi's major series <b>Hunter × Hunter</b> (ハンター×ハンター), an action-adventure manga, began serialization in 1998. The story revolves around the protagonist Gon Freecss, a young boy in search of his father, who is a legendary, elite member of society called a "Hunter". This manga also performed very well commercially, with the first 20 volumes selling nearly 55 million copies in Japan as of August 2011.[13] In 2008, Togashi tied with One Piece author Eiichiro Oda as the fifth favorite manga artist from a poll posted by the marketing research firm Oricon.
+            </p>
+            </div>
+       
+            <!-- 作者作品简介 -->
+            <div style="padding:5px;" class="author-work">
+            <h3 onclick="showList()"> WORKS </h3>
+            <!-- 作者作品列表 -->
+            <ul id="worklist" class="author-des" style="display:none;" >
+                <li><i>Sensēha Toshishita!! </i>(1986, later featured in Ten de Shōwaru Cupid Volume 4)</li>
+                <li><i>Jura no Miduki </i>(1987, featured in Hop Step Award Selection Volume 1 and later in Ten de Shōwaru Cupid Volume 4)</li>
+                <li><i>Ōkami Nante Kowakunai!! </i>(1989, tankōbon published by Shueisha)</li>
+                    <ul style="list-style-type:disc">
+                        <li><i>Buttobi Straight</i> (1987)</li>
+                        <li><i>Tonda Birthday Present</i> (1987, published in Weekly Shōnen Jump)</li>
+                        <li><i>Occult Tanteidan</i> (1988–1989, two parts published in Weekly Shōnen Jump)</li>
+                        <li><i>Horror Angel</i> (1988, published in Weekly Shōnen Jump)</li>
+                        <li><i>Ōkami Nante Kowakunai!!</i> (1989, published in Weekly Shōnen Jump)</li>
+                    </ul>
+                <li><i>Ten de Shōwaru Cupid</i> (1989–1990, serialized in Weekly Shōnen Jump)</li>
+                <li><i>YuYu Hakusho</i> (1990–1994, serialized in Weekly Shōnen Jump)</li>
+                <li><i>Level E</i> (1995–1997, serialized in Weekly Shōnen Jump)</li>
+                <li><i>Hunter × Hunter</i> (1998–ongoing, serialized in Weekly Shōnen Jump)</li>
+            </ul>
+            </div>
+    </div>
+
+    <!-- 间隙空格调整 -->
     <div class="space"></div>
 
-    <div class="title">AUTHOR</div>
-    <div class="part2">
+    <!-- PART3 故事情节简介 -->
+    <div class="title">STORY</div>
+    <div class="part3">
 
 
-     </div>
+    <!-- 间隙空格调整 -->
+    <div class="space"></div>
+
+    <!-- PART4 联系我们 -->
+    <div class="title">CONTACT</div>
+    <div class="part4">
 
 
+    <!-- 脚注 版权申明 -->
+    <footer>
+        <p> ©Copyright from Wikipedia, edit by Yiren</p>
+    </footer>
 
-  
+    
 
 </div>
 
@@ -67,7 +141,27 @@
 
 </div>
 </body>
-<script src="hunter.js"></script>
+<script>
+/* 鼠标移到work上，显示作品列表 */
+function showList(){
+    var status = document.getElementById("worklist").style.display
+    if (status == "none"){
+        document.getElementById("worklist").style.display = "block";
+    } else {
+        document.getElementById("worklist").style.display = "none";
+    }
+}
+
+/* 鼠标移到menuIcon上，横向显示导航栏 */
+function showMenu(){
+        document.getElementById("menu").style.display = "block";
+}
+/* 鼠标离开menuIcon上，隐藏导航栏 */
+function hideMenu(){
+        document.getElementById("menu").style.display = "none";
+}
+
+</script>
 <script>
  
 </script>
